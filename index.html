@@ -39,6 +39,9 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+  
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 
@@ -48,58 +51,44 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Hierarchical Fashion Design with Multi-stage Diffusion Models</h1>
+          <h1 class="title is-1 publication-title">HieraFashDiff: Hierarchical Fashion Design with Multi-stage Diffusion Models</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://scholar.google.com/citations?user=lCLsb1wAAAAJ ">Zhifeng Xie</a><sup>1,3</sup>,</span>
-            <span class="author-block">
-              <a href="https://github.com/haoli-zbdbc">Hao Li</a><sup>1</sup>,</span>
-            <span class="author-block">
-              <a href="https://scholar.google.com/citations?user=wNPWV8UAAAAJ&hl=zh-CN">Huiming Ding</a><sup>1</sup>,
+              Anonymous submission
             </span>
-            <span class="author-block">
-              <a href="https://scholar.google.com/citations?hl=zh-CN&user=SFvOV2oAAAAJ">Mengtian Li</a><sup>1,3</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://scholar.google.com/citations?user=uFjhoxYAAAAJ&hl=en">Ying Cao</a><sup>2</sup>
-            </span>
-            </span>
-          </div>
-
-          <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>Shanghai University,</span>
-            <span class="author-block"><sup>2</sup>ShanghaiTech University</span>
-            <span class="author-block"><sup>3</sup>Shanghai Engineering Research Center of Motion Picture Special Effects</span>
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
-              <span class="link-block">
-                <a href="https://arxiv.org/pdf/2401.07450.pdf"
+              <!-- PDF Link. -->
+              <!-- <span class="link-block">
+                <a href=""
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
                   </span>
                   <span>arXiv</span>
                 </a>
-              </span>
+              </span> -->
+
+              <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/haoli-zbdbc"
+                <a href="https://huggingface.co/anonymous-users/HieraFashDiff/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
-                  <span>Code(Coming Soon)</span>
+                  <span>Code</span>
                   </a>
               </span>
               <!-- Dataset Link. -->
               <span class="link-block">
-                <a href="https://github.com/haoli-zbdbc"
+                <a href="https://huggingface.co/anonymous-users/HieraFashDiff/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="far fa-images"></i>
                   </span>
-                  <span>Data(Coming Soon)</span>
+                  <span>Model</span>
                   </a>
             </div>
 
@@ -113,127 +102,36 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img src="./static/images/fig.1_1.jpg"
+      <img src="./static/images/teaser_w_1.png"
            alt="Hero Teaser Image"
            class="teaser-image"
            height="100%">
-      <h2 class="subtitle has-text-centered">
-        <strong>HieraFashDiff</strong> generates apparel design drafts with corresponding design elements based
-        on high-level design ideals. Subsequently, based on a draft design, our approach can iteratively edit the corresponding regions precisely according to
-        the text prompt of the low level while keeping the other regions unchanged.
+      <h2 class="content has-text-justified">
+        The proposed <strong>HieraFashDiff</strong> is capable of generating fashion design drafts from just abstract 
+        concepts (blue text), 
+        and allowing for local editing on the generated draft iteratively through a few apparel attribute descriptions (red text). Thus, our 
+        method can be used to facilitate typical fashion design workflow by enabling efficient ideation and rapid iteration.
       </h2>
     </div>
   </div>
 </section>
 
 
-
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h3 class="title is-4">Fashion Synthesis and Editing</h3>
-
-          <div id="results-carousel" class="carousel results-carousel">
-            <div class="item item-steve">
-              <img src="./static/images/seri/2024-01-14_164147.jpg"
-                  alt="Steve"
-                  height="100%">
-              <p>Steve</p>
-            </div>
-            <div class="item item-chair-tp">
-              <img src="./static/images/seri/2024-01-14_164201.jpg"
-                  alt="Chair TP"
-                  height="100%">
-              <p>Chair TP</p>
-            </div>
-            <div class="item item-shiba">
-              <img src="./static/images/seri/2024-01-14_164220.jpg"
-                  alt="Shiba"
-                  height="100%">
-              <p>Shiba</p>
-            </div>
-            <div class="item item-fullbody">
-              <img src="./static/images/seri/2024-01-14_164228.jpg"
-                  alt="Full Body"
-                  height="100%">
-              <p>Full Body</p>
-            </div>
-            <div class="item item-blueshirt">
-              <img src="./static/images/seri/2024-01-14_164234.jpg"
-                  alt="Blue Shirt"
-                  height="100%">
-              <p>Blue Shirt</p>
-            </div>
-            <div class="item item-mask">
-              <img src="./static/images/seri/2024-01-14_165504.jpg"
-                  alt="Mask"
-                  height="100%">
-              <p>Mask</p>
-            </div>
-            <div class="item item-coffee">
-              <img src="./static/images/seri/2024-01-14_165512.jpg"
-                  alt="Coffee"
-                  height="100%">
-              <p>Coffee</p>
-            </div>
-            <div class="item item-toby">
-              <img src="./static/images/seri/2024-01-14_165518.jpg"
-                  alt="Toby"
-                  height="100%">
-              <p>Toby</p>
-            </div>
-            <div class="item item-toby2">
-              <img src="./static/images/seri/2024-01-14_165523.jpg"
-                  alt="Toby2"
-                  height="100%">
-              <p>Toby2</p>
-            </div>
-            <div class="item item-toby3">
-              <img src="./static/images/seri/2024-01-14_165535.jpg"
-                  alt="Toby3"
-                  height="100%">
-              <p>Toby3</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-
 <section class="section">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
+      <div class="column is-five-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Cross-modal fashion synthesis and editing offer intelligent support to fashion designers by enabling the automatic generation and local modification of design drafts.
-            While current diffusion models demonstrate commendable stability and controllability in image synthesis,
-            they still face significant challenges in generating fashion design from abstract design elements and fine-grained editing.
-            Abstract sensory expressions, 
-            \eg office, business, and party, 
-            form the high-level design concepts, 
-            while measurable aspects like sleeve length, collar type, and pant length 
-            are considered the low-level attributes of clothing.
-            Controlling and editing fashion images using lengthy text descriptions poses a difficulty.
-          </p>
-          <p>
-            In this paper, we propose <strong>HieraFashDiff</strong>,
-            a novel fashion design method using the shared multi-stage diffusion model encompassing high-level design concepts and low-level clothing attributes in a hierarchical structure.
-            Specifically, we categorized the input text into different levels and fed them in different time step to the diffusion model
-            according to the criteria of professional clothing designers.
-            HieraFashDiff allows designers to add low-level attributes after high-level prompts for interactive editing incrementally.
-          </p>
-          <p>
-            In addition, we design a differentiable loss function in the sampling process with a mask to keep non-edit areas.Comprehensive experiments performed on our newly conducted Hierarchical fashion dataset,demonstrate that our proposed method outperforms other state-of-the-art competitors. 
+            Fashion design is a challenging and complex process.
+            Recent works on fashion generation and editing are all agnostic of the actual fashion design process, which limits their usage in practice.
+            In this paper, we propose a novel hierarchical diffusion-based framework tailored for fashion design, coined as <strong>HieraFashDiff</strong>. 
+            Our model is designed to mimic the practical fashion design workflow, by unraveling the denosing process into two successive stages: 1) an ideation stage that generates design proposals given high-level concepts and 2) an iteration stage that continuously refines the proposals using low-level attributes. 
+            Our model supports fashion design generation and fine-grained local editing in a single framework. 
+            To train our model, we contribute a new dataset of full-body fashion images annotated with hierarchical text descriptions. 
+            Extensive evaluations show that, as compared to prior approaches, our method can generate fashion designs and edited results with higher fidelity and better prompt adherence, showing its promising potential to augment the practical fashion design workflow.
           </p>
         </div>
       </div>
@@ -242,118 +140,71 @@
 
 
     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
+      <div class="column is-five-fifths">
         <h2 class="title is-3">Methods</h2>
-        <img src="./static/images/overveiw_1.jpg"
+        <img src="./static/images/framework_1.png"
              alt="Overview Image"
              height="100%">
         <div class="content has-text-justified">
-          <p>
-            Overview of the proposed HieraFashDiff, which consists of: (a) Hierarchy-aware Multi-stage Diffusion Model, (b) Coarse-grained Fashion Draft Synthesis, and (c) Fine-grained Latent-based Editing. The initial step involves employing the Prompt Schedule Module (PSM) to hierarchize high-level design concepts and low-level attributes from the input text, translating these into time sequences at intervals S per hierarchy.
-          </p>
-        </div>
+        <p>
+          Overview of our method. 
+          (a) The denoising process of our model is decomposed into an ideation stage and an iteration stage, which are conditioned on high-level concepts and low-level attributes, respectively.
+          (b) our editing method starts from the generated design daft \(x^C\) and produces a sequence of edited results \((x^{A_1}, x^{A_2}, \dots)\) given text prompts for different attributes \(({A_1}, {A_2}, \dots)\).
+          (c) our UNet-based denoising network is conditioned on additional pose information.
+        </p>
       </div>
-    </div>  
-  </div>
-</section>   
+      </div>
+    </div>
+    
 
-<section class="section">
-  <div class="container is-max-desktop">
 
     <div class="columns is-centered has-text-centered">
-      <div class="column is-full-width">
-
-        <h2 class="title is-3">Results</h2>
+      <div class="column is-five-fifths">
+        <!-- <h2 class="title is-3">Design Synthesis and Editing</h2> -->
     
-        <h3 class="title is-4 has-text-left">Coarse-grained Fashion Draft Synthesis</h3>
-        <img src="./static/images/fig.4_1.jpg"
-             alt="Coarse-grained Fashion Draft Synthesis Image"
+        <h2 class="title is-3">Design Draft Generation</h2>
+        <img src="./static/images/generation_1.png"
+             alt="Design Draft Generation"
+             height="100%">
+        <!-- <div class="content has-text-justified"> -->
+        <p>
+          Qualitative results of different methods for fashion draft generation from high-level design concepts.
+        </p>
+        <!-- </div> -->
+    
+        <h2 class="title is-3">Iterative Local Editing</h2>
+        <img src="./static/images/editing_1.png"
+             alt="Iterative Local Editing"
              height="100%">
         <div class="content has-text-justified">
-          <p>
-            Qualitative comparison of HieraFashDiff with state-of-the-art (SOTA) generation approaches. We show a draft garment design generated in the text condition. Current mainstream text-to-image generation models include Stable Diffusion-based and Stable Diffusion fine-tuned on the HieraFashion dataset. Our method can enable the correspondence between the desired high-level design concepts with the generated results.
-          </p>
+        <p>
+          Qualitative comparison of iterative local editing.
+          The latest editing methods often lack alignment with low-level attribute semantics, or cause undesirable global changes. Our method can precisely edit the corresponding regions according to the attribute descriptions while keeping the other regions unchanged, which is superior to other methods. 
+          TexFit-M refers to TexFit with our body part masks rather than its predicted ones.
+        </p>
         </div>
-        <br/>
         
-        <h3 class="title is-4 has-text-left">Fine-grained Latent-based Editing</h3>
-        <img src="./static/images/fig.5_1.jpg"
-             alt="Fine-grained Latent-based Editing Image"
-             height="100%">
-        <div class="content has-text-justified">
-          <p>
-            Evaluation on Local Editing. Stable Diffusion models cannot understand the meaning of "long dress" and cannot accurately localize the editing region, resulting in poor editing results. In contrast, our approach allows the model to learn the correspondence between the text description and the local area.
-          </p>
-        </div>
-        <br/>
+      </div>
+    </div>
 
-        <h3 class="title is-4 has-text-left">Related Links</h3>
-        <div class="content has-text-justified">
-          <p>
-            There's a lot of excellent work that was introduced around the same time as ours.
-          </p>
-          <ol>
-            <li>
-              <a href="https://github.com/TencentARC/T2I-AdapterT2I-Adapter">Learning Adapters to Dig out More Controllable Ability for Text-to-Image Diffusion Models</a>
-            </li>
-            <li>
-              <a href="https://github.com/google/prompt-to-prompt">Prompt-to-Prompt Image Editing with Cross-Attention Control</a>
-            </li>
-            <li>
-              <a href="https://github.com/ermongroup/SDEdit">SDEdit: Guided Image Synthesis and Editing with Stochastic Differential Equations</a>
-            </li>
-            <li>
-              <a href="https://github.com/MichalGeyer/plug-and-play">Plug-and-Play Diffusion Features for Text-Driven Image-to-Image Translation</a>
-            </li>
-            <!-- Add more links as needed -->
-          </ol>
-        </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-five-fifths">
+        <h2 class="title is-3">More Visual Results</h2>
+        <img src="./static/images/teaser_add_1.png"
+             alt="Teaser Image"
+             height="100%">
+        <img src="./static/images/editing_add_1.png"
+        alt="Additional Editing Image"
+        height="100%">
+      </div>
+      </div>
       </div>
     </div>
     
   </div>
 </section>
 
-
-
-
-
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>@article{...,
-  author    = {...},
-  title     = {...},
-  journal   = {...},
-  year      = {...},
-}</code></pre>
-  </div>
-</section>
-
-
-<footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-          <p>
-            This website is modified from the <a rel="license"
-            href="https://nerfies.github.io/">Nerfies, which is licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-          <p>
-            This means you are free to borrow the <a
-              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
-            we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
 
 </body>
 </html>
